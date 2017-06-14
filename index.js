@@ -1,7 +1,9 @@
-const fs = require('fs')
-const path = require('path')
-const findFilesInDir = require('./libs/findFilesInDir.js')
-const originalCwd = process.cwd()
+#!/usr/bin/env node --harmony
+
+var fs = require('fs')
+var path = require('path')
+var findFilesInDir = require('./libs/findFilesInDir.js')
+var originalCwd = process.cwd()
 
 var subcommand = ''; 
 
