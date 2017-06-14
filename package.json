@@ -1,6 +1,6 @@
 {
   "name": "storyblok-ds-convert",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Convert your Storyblok Datasource CSV to other formats (trados, ...)",
   "main": "index.js",
   "scripts": {
