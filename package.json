@@ -7,8 +7,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dominik Angerer",
-  "license": "MIT",
-  "dependencies": {
-    "cheerio": "^1.0.0-rc.1"
-  }
+  "license": "MIT"
 }
