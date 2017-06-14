@@ -48,7 +48,10 @@ if (subcommand == 'trados' || subcommand == 'xml') {
       var content = `<?xml version="1.0" encoding="UTF-8"?><page filename="${fileName}" id="${fileName}"><name>${fileName}</name><tags>${tags}</tags></page>`      
 
       fs.writeFile(`./${fileName}.xml`, content, 'utf8', function (err) {
-        if (err) return console.log(err)
+        if (err) {
+          return console.log(err)
+        }
+        console.log('Convert done.')
       })
     })
   }
