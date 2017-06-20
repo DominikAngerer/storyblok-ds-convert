@@ -75,10 +75,10 @@ if (subcommand == 'xml-csv' || subcommand == 'trados-csv') {
       var ids = data.match(new RegExp(/id="([^"]*)"/g))
       var contents = data.match(new RegExp(/<!\[CDATA\[([^\]]*)/g))
 
-      var content = 'name,value\n';
+      var content = 'name,value\r\n';
 
       for (var index = 1, max = ids.length; index < max; index++) {
-        content += [ids[index].substring(4, ids[index].length - 1)] + ',' + contents[index - 1].substring(9, contents[index - 1].length) + '\n'
+        content += [ids[index].substring(4, ids[index].length - 1)] + ',' + contents[index - 1].substring(9, contents[index - 1].length) + '\r\n'
       }
       
       // var content = `<?xml version="1.0" encoding="UTF-8"?><page filename="${fileName}" id="${fileName}"><name>${fileName}</name><tags>${tags}</tags></page>`      
