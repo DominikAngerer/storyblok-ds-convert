@@ -78,7 +78,11 @@ if (subcommand == 'xml-csv' || subcommand == 'trados-csv') {
       var content = 'name,value\r\n';
 
       for (var index = 1, max = ids.length; index < max; index++) {
-        content += [ids[index].substring(4, ids[index].length - 1)] + ',' + contents[index - 1].substring(9, contents[index - 1].length) + '\r\n'
+        var key = [ids[index].substring(4, ids[index].length - 1)]
+        key = key.indexOf(",") == -1 ? key : '"' +  key + '"'
+        var value = contents[index - 1].substring(9, contents[index - 1].length)
+        value = value.indexOf(",") == -1 ? value : '"' + value + '"'
+        content += key + ',' + value + '\r\n'
       }
       
       // var content = `<?xml version="1.0" encoding="UTF-8"?><page filename="${fileName}" id="${fileName}"><name>${fileName}</name><tags>${tags}</tags></page>`      
